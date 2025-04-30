@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/getclave/lifi-sdk/compare/v4.0.1...v4.0.0) (2025-05-01)
+
+### Bug Fixes
+
+- Update README.md ([f576693](https://github.com/getclave/lifi-sdk/commit/f5766930e8e19325b3e604ce66663bfc59574767))
+
 ## 4.0.0 (2025-04-30)
 
 ### ⚠ BREAKING CHANGES
