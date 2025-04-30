@@ -1,3 +1,5 @@
+<p align="center"><a href="https://getclave.com"><img width="1000" src='https://i.imgur.com/utPOhmS.png'/></a></p>
+
 <div align="center">
 
 [![license](https://img.shields.io/badge/license-Apache%202-blue)](/LICENSE.md)
@@ -9,7 +11,7 @@
 
 <h1 align="center">LI.FI SDK</h1>
 
-This package is the fork of permissionless.js, making it compatible with React Native (Expo V52).
+This package is the fork of LiFi SDK, making it compatible with React Native (Expo V52).
 
 [**LI.FI SDK**](https://docs.li.fi/integrate-li.fi-sdk/li.fi-sdk-overview) provides a powerful toolkit for developers to enable seamless cross-chain and on-chain swaps and bridging within their applications. Our JavaScript/TypeScript SDK can be implemented in front-end or back-end environments, allowing you to build robust UX/UI around our advanced bridge and swap functionalities. LI.FI SDK efficiently manages all communications between our smart routing API and smart contracts and ensures optimal performance, security, and scalability for your cross-chain and on-chain needs.
 
