@@ -7,7 +7,7 @@ import {
   it,
   vi,
 } from 'vitest'
-import { checkPackageUpdates } from './checkPackageUpdates.js'
+import { checkPackageUpdates } from './checkPackageUpdates'
 
 const latestVersion = '2.5.6'
 

@@ -1,5 +1,5 @@
 import type { ChainType } from '@lifi/types'
-import { config } from '../config.js'
+import { config } from '../config'
 
 export const getProvider = <T>(type: ChainType): T => {
   const provider = config

@@ -1,9 +1,9 @@
 import type { LiFiStep } from '@lifi/types'
-import { LiFiErrorCode } from '../errors/constants.js'
-import { TransactionError } from '../errors/errors.js'
-import type { StatusManager } from './StatusManager.js'
-import type { ExecutionOptions } from './types.js'
-import { checkStepSlippageThreshold } from './utils.js'
+import { LiFiErrorCode } from '../errors/constants'
+import { TransactionError } from '../errors/errors'
+import type { StatusManager } from './StatusManager'
+import type { ExecutionOptions } from './types'
+import { checkStepSlippageThreshold } from './utils'
 
 /**
  * This method checks whether the new and updated Step meets the required exchange rate conditions.

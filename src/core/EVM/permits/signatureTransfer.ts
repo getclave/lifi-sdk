@@ -1,12 +1,12 @@
 import { hashTypedData } from 'viem'
 import type { Address, TypedData, TypedDataDomain } from 'viem'
-import { invariant } from '../../../utils/invariant.js'
+import { invariant } from '../../../utils/invariant'
 import {
   MaxSigDeadline,
   MaxSignatureTransferAmount,
   MaxUnorderedNonce,
-} from './constants.js'
-import { permit2Domain } from './domain.js'
+} from './constants'
+import { permit2Domain } from './domain'
 
 export type Witness = {
   witness: any

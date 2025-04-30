@@ -4,10 +4,10 @@ import {
   type TypedDataDomain,
   hashTypedData,
 } from 'viem'
-import { MaxUint48, MaxUint160 } from '../../../constants.js'
-import { invariant } from '../../../utils/invariant.js'
-import { MaxSigDeadline } from './constants.js'
-import { permit2Domain } from './domain.js'
+import { MaxUint48, MaxUint160 } from '../../../constants'
+import { invariant } from '../../../utils/invariant'
+import { MaxSigDeadline } from './constants'
+import { permit2Domain } from './domain'
 
 export const MaxAllowanceTransferAmount = MaxUint160
 export const MaxAllowanceExpiration = MaxUint48

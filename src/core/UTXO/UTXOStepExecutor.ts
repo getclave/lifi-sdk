@@ -3,21 +3,21 @@ import type { ReplacementReason } from '@bigmi/core'
 import { ChainId } from '@lifi/types'
 import { Psbt, address, networks } from 'bitcoinjs-lib'
 import { type Client, withTimeout } from 'viem'
-import { config } from '../../config.js'
-import { LiFiErrorCode } from '../../errors/constants.js'
-import { TransactionError } from '../../errors/errors.js'
-import { getStepTransaction } from '../../services/api.js'
-import { BaseStepExecutor } from '../BaseStepExecutor.js'
-import { checkBalance } from '../checkBalance.js'
-import { stepComparison } from '../stepComparison.js'
+import { config } from '../../config'
+import { LiFiErrorCode } from '../../errors/constants'
+import { TransactionError } from '../../errors/errors'
+import { getStepTransaction } from '../../services/api'
+import { BaseStepExecutor } from '../BaseStepExecutor'
+import { checkBalance } from '../checkBalance'
+import { stepComparison } from '../stepComparison'
 import type {
   LiFiStepExtended,
   StepExecutorOptions,
   TransactionParameters,
-} from '../types.js'
-import { waitForDestinationChainTransaction } from '../waitForDestinationChainTransaction.js'
-import { getUTXOPublicClient } from './getUTXOPublicClient.js'
-import { parseUTXOErrors } from './parseUTXOErrors.js'
+} from '../types'
+import { waitForDestinationChainTransaction } from '../waitForDestinationChainTransaction'
+import { getUTXOPublicClient } from './getUTXOPublicClient'
+import { parseUTXOErrors } from './parseUTXOErrors'
 
 export interface UTXOStepExecutorOptions extends StepExecutorOptions {
   client: Client

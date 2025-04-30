@@ -1,5 +1,5 @@
-import type { ErrorCode, ErrorName } from './constants.js'
-import { getRootCause } from './utils/rootCause.js'
+import type { ErrorCode, ErrorName } from './constants'
+import { getRootCause } from './utils/rootCause'
 
 // Note: we use the BaseErrors to capture errors at specific points in the code
 // they can carry addition to help give more context

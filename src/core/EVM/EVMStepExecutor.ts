@@ -16,40 +16,40 @@ import {
   signTypedData,
 } from 'viem/actions'
 import { getAction } from 'viem/utils'
-import { config } from '../../config.js'
-import { LiFiErrorCode } from '../../errors/constants.js'
-import { TransactionError } from '../../errors/errors.js'
+import { config } from '../../config'
+import { LiFiErrorCode } from '../../errors/constants'
+import { TransactionError } from '../../errors/errors'
 import {
   getRelayerQuote,
   getStepTransaction,
   relayTransaction,
-} from '../../services/api.js'
-import { BaseStepExecutor } from '../BaseStepExecutor.js'
-import { checkBalance } from '../checkBalance.js'
-import { stepComparison } from '../stepComparison.js'
+} from '../../services/api'
+import { BaseStepExecutor } from '../BaseStepExecutor'
+import { checkBalance } from '../checkBalance'
+import { stepComparison } from '../stepComparison'
 import type {
   LiFiStepExtended,
   Process,
   StepExecutorOptions,
   TransactionParameters,
-} from '../types.js'
-import { waitForDestinationChainTransaction } from '../waitForDestinationChainTransaction.js'
-import { checkAllowance } from './checkAllowance.js'
-import { isBatchingSupported } from './isBatchingSupported.js'
-import { parseEVMErrors } from './parseEVMErrors.js'
-import { encodeNativePermitData } from './permits/encodeNativePermitData.js'
-import { encodePermit2Data } from './permits/encodePermit2Data.js'
-import { signPermit2Message } from './permits/signPermit2Message.js'
-import { switchChain } from './switchChain.js'
-import { isRelayerStep } from './typeguards.js'
-import type { Call, TransactionMethodType } from './types.js'
-import { convertExtendedChain, getMaxPriorityFeePerGas } from './utils.js'
+} from '../types'
+import { waitForDestinationChainTransaction } from '../waitForDestinationChainTransaction'
+import { checkAllowance } from './checkAllowance'
+import { isBatchingSupported } from './isBatchingSupported'
+import { parseEVMErrors } from './parseEVMErrors'
+import { encodeNativePermitData } from './permits/encodeNativePermitData'
+import { encodePermit2Data } from './permits/encodePermit2Data'
+import { signPermit2Message } from './permits/signPermit2Message'
+import { switchChain } from './switchChain'
+import { isRelayerStep } from './typeguards'
+import type { Call, TransactionMethodType } from './types'
+import { convertExtendedChain, getMaxPriorityFeePerGas } from './utils'
 import {
   type WalletCallReceipt,
   waitForBatchTransactionReceipt,
-} from './waitForBatchTransactionReceipt.js'
-import { waitForRelayedTransactionReceipt } from './waitForRelayedTransactionReceipt.js'
-import { waitForTransactionReceipt } from './waitForTransactionReceipt.js'
+} from './waitForBatchTransactionReceipt'
+import { waitForRelayedTransactionReceipt } from './waitForRelayedTransactionReceipt'
+import { waitForTransactionReceipt } from './waitForTransactionReceipt'
 
 export interface EVMStepExecutorOptions extends StepExecutorOptions {
   client: Client

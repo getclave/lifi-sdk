@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { version } from '../version.js'
-import { SDKError } from './SDKError.js'
-import { BaseError } from './baseError.js'
-import { ErrorName, LiFiErrorCode } from './constants.js'
-import { HTTPError } from './httpError.js'
+import { version } from '../version'
+import { SDKError } from './SDKError'
+import { BaseError } from './baseError'
+import { ErrorName, LiFiErrorCode } from './constants'
+import { HTTPError } from './httpError'
 
 const url = 'http://some.where'
 const options = { method: 'POST' }

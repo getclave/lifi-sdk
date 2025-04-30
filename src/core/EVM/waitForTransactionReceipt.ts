@@ -8,9 +8,9 @@ import type {
   TransactionReceipt,
 } from 'viem'
 import { waitForTransactionReceipt as waitForTransactionReceiptInternal } from 'viem/actions'
-import { LiFiErrorCode } from '../../errors/constants.js'
-import { TransactionError } from '../../errors/errors.js'
-import { getPublicClient } from './publicClient.js'
+import { LiFiErrorCode } from '../../errors/constants'
+import { TransactionError } from '../../errors/errors'
+import { getPublicClient } from './publicClient'
 
 interface WaitForTransactionReceiptProps {
   client: Client

@@ -1,15 +1,15 @@
 import type { BaseToken, ChainId } from '@lifi/types'
 import type { Address } from 'viem'
 import { multicall, readContract } from 'viem/actions'
-import { isNativeTokenAddress } from '../../utils/isZeroAddress.js'
-import { allowanceAbi } from './abi.js'
-import { getPublicClient } from './publicClient.js'
+import { isNativeTokenAddress } from '../../utils/isZeroAddress'
+import { allowanceAbi } from './abi'
+import { getPublicClient } from './publicClient'
 import type {
   TokenAllowance,
   TokenSpender,
   TokenSpenderAllowance,
-} from './types.js'
-import { getMulticallAddress } from './utils.js'
+} from './types'
+import { getMulticallAddress } from './utils'
 
 export const getAllowance = async (
   chainId: ChainId,

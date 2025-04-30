@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { SDKError } from '../SDKError.js'
-import { BaseError } from '../baseError.js'
-import { ErrorName, LiFiErrorCode } from '../constants.js'
-import { getRootCause } from './rootCause.js'
+import { SDKError } from '../SDKError'
+import { BaseError } from '../baseError'
+import { ErrorName, LiFiErrorCode } from '../constants'
+import { getRootCause } from './rootCause'
 
 const getErrorChain = () => {
   const NonLiFiErrorChain = new Error('non lifi error')

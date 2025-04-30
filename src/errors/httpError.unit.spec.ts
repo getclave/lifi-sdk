@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { ErrorName, LiFiErrorCode } from './constants.js'
-import { HTTPError } from './httpError.js'
+import { ErrorName, LiFiErrorCode } from './constants'
+import { HTTPError } from './httpError'
 
 const url = 'http://some.where'
 const options = { method: 'POST' }

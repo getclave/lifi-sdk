@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { SDKError } from '../SDKError.js'
-import { BaseError } from '../baseError.js'
-import { ErrorName, LiFiErrorCode } from '../constants.js'
-import { HTTPError } from '../httpError.js'
+import { SDKError } from '../SDKError'
+import { BaseError } from '../baseError'
+import { ErrorName, LiFiErrorCode } from '../constants'
+import { HTTPError } from '../httpError'
 import {
   getRootCauseBaseError,
   getRootCauseBaseErrorMessage,
-} from './baseErrorRootCause.js'
+} from './baseErrorRootCause'
 
 const getErrorChain = () => {
   const NonLiFiErrorChain = new Error('non lifi error')

@@ -1,5 +1,5 @@
 {
-  "name": "@lifi/sdk",
+  "name": "@getclave/lifi-sdk",
   "version": "3.6.11",
   "description": "LI.FI Any-to-Any Cross-Chain-Swap SDK",
   "keywords": [
@@ -22,13 +22,13 @@
     "web3",
     "web3-react"
   ],
-  "homepage": "https://github.com/lifinance/sdk",
+  "homepage": "https://github.com/getclave/lifi-sdk",
   "bugs": {
-    "url": "https://github.com/lifinance/sdk/issues"
+    "url": "https://github.com/getclave/lifi-sdk/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifinance/sdk.git"
+    "url": "git+https://github.com/getclave/lifi-sdk.git"
   },
   "license": "Apache-2.0",
   "author": "LI.FI <github@li.finance>",
@@ -95,8 +95,6 @@
     "@bigmi/core": "^0.1.1",
     "@lifi/types": "^17.13.0",
     "@noble/curves": "^1.9.0",
-    "@solana/wallet-adapter-base": "^0.9.24",
-    "@solana/web3.js": "^1.98.0",
     "bech32": "^2.0.0",
     "bitcoinjs-lib": "^7.0.0-rc.0",
     "bs58": "^6.0.0",
@@ -121,8 +119,6 @@
     "vitest": "^3.1.2"
   },
   "peerDependencies": {
-    "@solana/wallet-adapter-base": "^0.9.0",
-    "@solana/web3.js": "^1.98.0",
     "viem": "^2.21.0"
   },
   "publishConfig": {

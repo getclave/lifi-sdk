@@ -1,4 +1,4 @@
-import type { ExecutionOptions, RouteExtended, StepExecutor } from './types.js'
+import type { ExecutionOptions, RouteExtended, StepExecutor } from './types'
 
 export interface ExecutionData {
   route: RouteExtended

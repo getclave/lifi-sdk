@@ -1,5 +1,5 @@
 import { ChainId, type Token, type TokenAmount } from '@lifi/types'
-import { getUTXOPublicClient } from './getUTXOPublicClient.js'
+import { getUTXOPublicClient } from './getUTXOPublicClient'
 
 export const getUTXOBalance = async (
   walletAddress: string,

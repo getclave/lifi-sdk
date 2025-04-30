@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { waitForResult } from './waitForResult.js'
+import { waitForResult } from './waitForResult'
 
 describe('utils', () => {
   describe('waitForResult', () => {

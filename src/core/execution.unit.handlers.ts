@@ -1,11 +1,11 @@
 import { http, HttpResponse } from 'msw'
-import { buildStepObject } from '../../tests/fixtures.js'
-import { config } from '../config.js'
+import { buildStepObject } from '../../tests/fixtures'
+import { config } from '../config'
 import {
   mockChainsResponse,
   mockStatus,
   mockStepTransactionWithTxRequest,
-} from './execution.unit.mock.js'
+} from './execution.unit.mock'
 
 const _config = config.get()
 

@@ -2,12 +2,12 @@ import type { LiFiStep } from '@lifi/types'
 import type { Client } from 'viem'
 import type { Mock } from 'vitest'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { buildStepObject } from '../../../tests/fixtures.js'
-import { LiFiErrorCode } from '../../errors/constants.js'
-import { ProviderError } from '../../errors/errors.js'
-import type { StatusManager } from '../StatusManager.js'
-import type { ExecutionOptions } from '../types.js'
-import { switchChain } from './switchChain.js'
+import { buildStepObject } from '../../../tests/fixtures'
+import { LiFiErrorCode } from '../../errors/constants'
+import { ProviderError } from '../../errors/errors'
+import type { StatusManager } from '../StatusManager'
+import type { ExecutionOptions } from '../types'
+import { switchChain } from './switchChain'
 
 let client: Client
 let step: LiFiStep

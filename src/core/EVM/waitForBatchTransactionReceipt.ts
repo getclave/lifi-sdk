@@ -5,8 +5,8 @@ import type {
 } from 'viem'
 import { waitForCallsStatus } from 'viem/actions'
 import { getAction } from 'viem/utils'
-import { LiFiErrorCode } from '../../errors/constants.js'
-import { TransactionError } from '../../errors/errors.js'
+import { LiFiErrorCode } from '../../errors/constants'
+import { TransactionError } from '../../errors/errors'
 
 export type WalletCallReceipt = _WalletCallReceipt<
   bigint,

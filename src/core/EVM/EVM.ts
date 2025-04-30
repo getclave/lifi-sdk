@@ -1,10 +1,10 @@
 import { ChainType } from '@lifi/types'
 import { isAddress } from 'viem'
-import type { StepExecutorOptions } from '../types.js'
-import { EVMStepExecutor } from './EVMStepExecutor.js'
-import { getENSAddress } from './getENSAddress.js'
-import { getEVMBalance } from './getEVMBalance.js'
-import type { EVMProvider, EVMProviderOptions } from './types.js'
+import type { StepExecutorOptions } from '../types'
+import { EVMStepExecutor } from './EVMStepExecutor'
+import { getENSAddress } from './getENSAddress'
+import { getEVMBalance } from './getEVMBalance'
+import type { EVMProvider, EVMProviderOptions } from './types'
 
 export function EVM(options?: EVMProviderOptions): EVMProvider {
   const _options: EVMProviderOptions = options ?? {}

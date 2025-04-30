@@ -1,10 +1,10 @@
-import { config } from './config.js'
-import { SDKError } from './errors/SDKError.js'
-import { ValidationError } from './errors/errors.js'
-import { HTTPError } from './errors/httpError.js'
-import type { ExtendedRequestInit } from './types/request.js'
-import { sleep } from './utils/sleep.js'
-import { version } from './version.js'
+import { config } from './config'
+import { SDKError } from './errors/SDKError'
+import { ValidationError } from './errors/errors'
+import { HTTPError } from './errors/httpError'
+import type { ExtendedRequestInit } from './types/request'
+import { sleep } from './utils/sleep'
+import { version } from './version'
 
 export const requestSettings = {
   retries: 1,

@@ -1,9 +1,9 @@
 import type { StaticToken, Token } from '@lifi/types'
 import { ChainId, CoinKey } from '@lifi/types'
 import { beforeAll, describe, expect, it } from 'vitest'
-import { setupTestEnvironment } from '../../../tests/setup.js'
-import { findDefaultToken } from '../../../tests/tokens.js'
-import { getUTXOBalance } from './getUTXOBalance.js'
+import { setupTestEnvironment } from '../../../tests/setup'
+import { findDefaultToken } from '../../../tests/tokens'
+import { getUTXOBalance } from './getUTXOBalance'
 
 const defaultWalletAddress = 'bc1q5hx26klsnyqqc9255vuh0s96guz79x0cc54896'
 

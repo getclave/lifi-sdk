@@ -9,9 +9,9 @@ import {
 import type { Address, Client, Hex } from 'viem'
 import type { TypedDataDomain } from 'viem'
 import { multicall, readContract } from 'viem/actions'
-import { eip2612Abi, eip2612Types } from '../abi.js'
-import { getMulticallAddress } from '../utils.js'
-import type { NativePermitData } from './types.js'
+import { eip2612Abi, eip2612Types } from '../abi'
+import { getMulticallAddress } from '../utils'
+import type { NativePermitData } from './types'
 
 /**
  * EIP-712 domain typehash with chainId

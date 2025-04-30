@@ -10,16 +10,16 @@ import {
   it,
   vi,
 } from 'vitest'
-import { setupTestEnvironment } from '../tests/setup.js'
-import { config } from './config.js'
-import { SDKError } from './errors/SDKError.js'
-import { ValidationError } from './errors/errors.js'
-import type { HTTPError } from './errors/httpError.js'
-import { request } from './request.js'
-import { handlers } from './services/api.unit.handlers.js'
-import type { SDKBaseConfig } from './types/internal.js'
-import type { ExtendedRequestInit } from './types/request.js'
-import { version } from './version.js'
+import { setupTestEnvironment } from '../tests/setup'
+import { config } from './config'
+import { SDKError } from './errors/SDKError'
+import { ValidationError } from './errors/errors'
+import type { HTTPError } from './errors/httpError'
+import { request } from './request'
+import { handlers } from './services/api.unit.handlers'
+import type { SDKBaseConfig } from './types/internal'
+import type { ExtendedRequestInit } from './types/request'
+import { version } from './version'
 
 const apiUrl = config.get().apiUrl
 

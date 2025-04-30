@@ -1,5 +1,5 @@
-import { BaseError } from '../baseError.js'
-import { HTTPError } from '../httpError.js'
+import { BaseError } from '../baseError'
+import { HTTPError } from '../httpError'
 
 export const getRootCauseBaseError = (e: Error) => {
   let rootCause = e

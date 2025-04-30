@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getQuote } from './api.js'
+import { getQuote } from './api'
 
 describe('ApiService Integration Tests', () => {
   it('should successfully request a quote', async () => {

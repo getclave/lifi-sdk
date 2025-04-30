@@ -1,11 +1,11 @@
 import type { LiFiStep } from '@lifi/types'
-import { StatusManager } from './StatusManager.js'
+import { StatusManager } from './StatusManager'
 import type {
   ExecutionOptions,
   InteractionSettings,
   StepExecutor,
   StepExecutorOptions,
-} from './types.js'
+} from './types'
 
 // Please be careful when changing the defaults as it may break the behavior (e.g., background execution)
 const defaultInteractionSettings = {

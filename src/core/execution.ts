@@ -1,8 +1,8 @@
 import type { Route } from '@lifi/types'
-import { config } from '../config.js'
-import { executionState } from './executionState.js'
-import { prepareRestart } from './prepareRestart.js'
-import type { ExecutionOptions, RouteExtended } from './types.js'
+import { config } from '../config'
+import { executionState } from './executionState'
+import { prepareRestart } from './prepareRestart'
+import type { ExecutionOptions, RouteExtended } from './types'
 
 /**
  * Execute a route.

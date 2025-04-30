@@ -33,14 +33,14 @@ import {
   isContractCallsRequestWithFromAmount,
   isContractCallsRequestWithToAmount,
 } from '@lifi/types'
-import { config } from '../config.js'
-import { SDKError } from '../errors/SDKError.js'
-import { BaseError } from '../errors/baseError.js'
-import { ErrorName } from '../errors/constants.js'
-import { ValidationError } from '../errors/errors.js'
-import { request } from '../request.js'
-import { isRoutesRequest, isStep } from '../typeguards.js'
-import { withDedupe } from '../utils/withDedupe.js'
+import { config } from '../config'
+import { SDKError } from '../errors/SDKError'
+import { BaseError } from '../errors/baseError'
+import { ErrorName } from '../errors/constants'
+import { ValidationError } from '../errors/errors'
+import { request } from '../request'
+import { isRoutesRequest, isStep } from '../typeguards'
+import { withDedupe } from '../utils/withDedupe'
 
 /**
  * Get a quote for a token transfer

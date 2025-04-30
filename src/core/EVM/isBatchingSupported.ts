@@ -8,8 +8,8 @@ import type {
 import type { GetCapabilitiesParameters, GetCapabilitiesReturnType } from 'viem'
 import { parseAccount } from 'viem/accounts'
 import { getAction } from 'viem/utils'
-import { config } from '../../config.js'
-import type { EVMProvider } from './types.js'
+import { config } from '../../config'
+import type { EVMProvider } from './types'
 
 export async function getCapabilities<
   chainId extends number | undefined = undefined,

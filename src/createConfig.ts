@@ -1,9 +1,9 @@
 import { ChainType } from '@lifi/types'
-import { config } from './config.js'
-import { getChains } from './services/api.js'
-import type { SDKConfig } from './types/internal.js'
-import { checkPackageUpdates } from './utils/checkPackageUpdates.js'
-import { name, version } from './version.js'
+import { config } from './config'
+import { getChains } from './services/api'
+import type { SDKConfig } from './types/internal'
+import { checkPackageUpdates } from './utils/checkPackageUpdates'
+import { name, version } from './version'
 
 function createBaseConfig(options: SDKConfig) {
   if (!options.integrator) {

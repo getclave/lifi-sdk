@@ -1,4 +1,4 @@
-import { MaxUint48, MaxUint160, MaxUint256 } from '../../../constants.js'
+import { MaxUint48, MaxUint160, MaxUint256 } from '../../../constants'
 
 export const MaxAllowanceTransferAmount = MaxUint160
 export const MaxAllowanceExpiration = MaxUint48

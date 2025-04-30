@@ -1,6 +1,6 @@
 import { ChainId } from '@lifi/types'
 import { getEnsAddress, normalize } from 'viem/ens'
-import { getPublicClient } from './publicClient.js'
+import { getPublicClient } from './publicClient'
 
 export const getENSAddress = async (
   name: string

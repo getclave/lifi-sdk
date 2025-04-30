@@ -2,9 +2,9 @@ import { ChainId, ChainType } from '@lifi/types'
 import type { Client } from 'viem'
 import { http, createClient, fallback, webSocket } from 'viem'
 import { type Chain, mainnet } from 'viem/chains'
-import { config } from '../../config.js'
-import { getRpcUrls } from '../rpc.js'
-import type { EVMProvider } from './types.js'
+import { config } from '../../config'
+import { getRpcUrls } from '../rpc'
+import type { EVMProvider } from './types'
 
 // cached providers
 const publicClients: Record<number, Client> = {}

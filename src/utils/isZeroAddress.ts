@@ -1,4 +1,4 @@
-import { AddressZero, AlternativeAddressZero } from '../constants.js'
+import { AddressZero, AlternativeAddressZero } from '../constants'
 
 export const isZeroAddress = (address: string): boolean => {
   if (address === AddressZero || address === AlternativeAddressZero) {

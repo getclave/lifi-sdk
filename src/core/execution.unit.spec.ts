@@ -11,10 +11,10 @@ import {
   it,
   vi,
 } from 'vitest'
-import { buildRouteObject, buildStepObject } from '../../tests/fixtures.js'
-import { requestSettings } from '../request.js'
-import { executeRoute } from './execution.js'
-import { lifiHandlers } from './execution.unit.handlers.js'
+import { buildRouteObject, buildStepObject } from '../../tests/fixtures'
+import { requestSettings } from '../request'
+import { executeRoute } from './execution'
+import { lifiHandlers } from './execution.unit.handlers'
 
 let client: Partial<Client>
 

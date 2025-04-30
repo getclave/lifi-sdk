@@ -3,11 +3,11 @@ import type {
   ExtendedTransactionInfo,
   FullStatusData,
 } from '@lifi/types'
-import { LiFiErrorCode } from '../errors/constants.js'
-import { getTransactionFailedMessage } from '../utils/getTransactionMessage.js'
-import type { StatusManager } from './StatusManager.js'
-import type { LiFiStepExtended, Process } from './types.js'
-import { waitForTransactionStatus } from './waitForTransactionStatus.js'
+import { LiFiErrorCode } from '../errors/constants'
+import { getTransactionFailedMessage } from '../utils/getTransactionMessage'
+import type { StatusManager } from './StatusManager'
+import type { LiFiStepExtended, Process } from './types'
+import { waitForTransactionStatus } from './waitForTransactionStatus'
 
 export async function waitForDestinationChainTransaction(
   step: LiFiStepExtended,

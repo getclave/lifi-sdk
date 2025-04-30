@@ -1,5 +1,5 @@
-import { createConfig } from '../src/createConfig.js'
-import { EVM, Solana } from '../src/index.js'
+import { createConfig } from '../src/createConfig'
+import { EVM, Solana } from '../src/index'
 
 export const setupTestEnvironment = () => {
   createConfig({

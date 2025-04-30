@@ -1,6 +1,6 @@
 import { ChainId, type ChainType, type ExtendedChain } from '@lifi/types'
-import type { SDKProvider } from './core/types.js'
-import type { RPCUrls, SDKBaseConfig, SDKConfig } from './types/internal.js'
+import type { SDKProvider } from './core/types'
+import type { RPCUrls, SDKBaseConfig, SDKConfig } from './types/internal'
 
 export const config = (() => {
   const _config: SDKBaseConfig = {

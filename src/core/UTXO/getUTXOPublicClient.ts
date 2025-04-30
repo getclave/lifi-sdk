@@ -10,8 +10,8 @@ import {
   fallback,
   rpcSchema,
 } from 'viem'
-import { config } from '../../config.js'
-import { getRpcUrls } from '../rpc.js'
+import { config } from '../../config'
+import { getRpcUrls } from '../rpc'
 
 // cached providers
 const publicClients: Record<

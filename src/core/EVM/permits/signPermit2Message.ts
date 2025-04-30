@@ -3,8 +3,8 @@ import type { Address, Client, Hex } from 'viem'
 import { keccak256 } from 'viem'
 import { signTypedData } from 'viem/actions'
 import { getAction } from 'viem/utils'
-import { getPermitTransferFromValues } from './getPermitTransferFromValues.js'
-import { getPermitData } from './signatureTransfer.js'
+import { getPermitTransferFromValues } from './getPermitTransferFromValues'
+import { getPermitData } from './signatureTransfer'
 
 export interface SignPermit2MessageParams {
   client: Client

@@ -1,4 +1,4 @@
-import { name, version } from '../version.js'
+import { name, version } from '../version'
 
 export const checkPackageUpdates = async (
   packageName?: string,

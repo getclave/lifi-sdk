@@ -1,25 +1,25 @@
 // biome-ignore lint/performance/noBarrelFile: module entrypoint
 // biome-ignore lint/performance/noReExportAll: types
 export * from '@lifi/types'
-export { config } from './config.js'
-export { EVM } from './core/EVM/EVM.js'
+export { config } from './config'
+export { EVM } from './core/EVM/EVM'
 export {
   getTokenAllowance,
   getTokenAllowanceMulticall,
-} from './core/EVM/getAllowance.js'
+} from './core/EVM/getAllowance'
 export {
   revokeTokenApproval,
   setTokenAllowance,
-} from './core/EVM/setAllowance.js'
-export { isEVM } from './core/EVM/types.js'
-export { isBatchingSupported } from './core/EVM/isBatchingSupported.js'
-export { isExtendedChain, convertExtendedChain } from './core/EVM/utils.js'
-export { isRelayerStep, isGaslessStep } from './core/EVM/typeguards.js'
+} from './core/EVM/setAllowance'
+export { isEVM } from './core/EVM/types'
+export { isBatchingSupported } from './core/EVM/isBatchingSupported'
+export { isExtendedChain, convertExtendedChain } from './core/EVM/utils'
+export { isRelayerStep, isGaslessStep } from './core/EVM/typeguards'
 export type {
   EVMProvider,
   EVMProviderOptions,
-} from './core/EVM/types.js'
-export { StatusManager } from './core/StatusManager.js'
+} from './core/EVM/types'
+export { StatusManager } from './core/StatusManager'
 export {
   executeRoute,
   getActiveRoute,
@@ -27,7 +27,7 @@ export {
   resumeRoute,
   stopRouteExecution,
   updateRouteExecution,
-} from './core/execution.js'
+} from './core/execution'
 export type {
   AcceptExchangeRateUpdateHook,
   AcceptSlippageUpdateHook,
@@ -54,25 +54,14 @@ export type {
   TransactionRequestParameters,
   TransactionRequestUpdateHook,
   UpdateRouteHook,
-} from './core/types.js'
-export { isSVMAddress } from './core/Solana/isSVMAddress.js'
-export {
-  KeypairWalletAdapter,
-  KeypairWalletName,
-} from './core/Solana/KeypairWalletAdapter.js'
-export { Solana } from './core/Solana/Solana.js'
-export { isSolana } from './core/Solana/types.js'
-export type {
-  SolanaProvider,
-  SolanaProviderOptions,
-} from './core/Solana/types.js'
-export { UTXO } from './core/UTXO/UTXO.js'
-export { isUTXO } from './core/UTXO/types.js'
-export type { UTXOProvider, UTXOProviderOptions } from './core/UTXO/types.js'
-export { createConfig } from './createConfig.js'
-export { checkPackageUpdates } from './utils/checkPackageUpdates.js'
-export { convertQuoteToRoute } from './utils/convertQuoteToRoute.js'
-export { fetchTxErrorDetails } from './utils/fetchTxErrorDetails.js'
+} from './core/types'
+export { UTXO } from './core/UTXO/UTXO'
+export { isUTXO } from './core/UTXO/types'
+export type { UTXOProvider, UTXOProviderOptions } from './core/UTXO/types'
+export { createConfig } from './createConfig'
+export { checkPackageUpdates } from './utils/checkPackageUpdates'
+export { convertQuoteToRoute } from './utils/convertQuoteToRoute'
+export { fetchTxErrorDetails } from './utils/fetchTxErrorDetails'
 export {
   getChains,
   getConnections,
@@ -87,21 +76,21 @@ export {
   getTokens,
   getTools,
   getTransactionHistory,
-} from './services/api.js'
+} from './services/api'
 export {
   getTokenBalance,
   getTokenBalances,
   getTokenBalancesByChain,
-} from './services/balance.js'
-export { getNameServiceAddress } from './services/getNameServiceAddress.js'
-export type { RPCUrls, SDKBaseConfig, SDKConfig } from './types/internal.js'
-export { BaseError } from './errors/baseError.js'
+} from './services/balance'
+export { getNameServiceAddress } from './services/getNameServiceAddress'
+export type { RPCUrls, SDKBaseConfig, SDKConfig } from './types/internal'
+export { BaseError } from './errors/baseError'
 export {
   ErrorMessage,
   ErrorName,
   LiFiErrorCode,
-} from './errors/constants.js'
-export type { ErrorCode } from './errors/constants.js'
+} from './errors/constants'
+export type { ErrorCode } from './errors/constants'
 export {
   BalanceError,
   ProviderError,
@@ -110,6 +99,6 @@ export {
   TransactionError,
   UnknownError,
   ValidationError,
-} from './errors/errors.js'
-export { HTTPError } from './errors/httpError.js'
-export { SDKError } from './errors/SDKError.js'
+} from './errors/errors'
+export { HTTPError } from './errors/httpError'
+export { SDKError } from './errors/SDKError'

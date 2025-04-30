@@ -21,15 +21,15 @@ import {
   it,
   vi,
 } from 'vitest'
-import { setupTestEnvironment } from '../../tests/setup.js'
-import { findDefaultToken } from '../../tests/tokens.js'
-import { config } from '../config.js'
-import { SDKError } from '../errors/SDKError.js'
-import { ValidationError } from '../errors/errors.js'
-import * as request from '../request.js'
-import { requestSettings } from '../request.js'
-import * as ApiService from './api.js'
-import { handlers } from './api.unit.handlers.js'
+import { setupTestEnvironment } from '../../tests/setup'
+import { findDefaultToken } from '../../tests/tokens'
+import { config } from '../config'
+import { SDKError } from '../errors/SDKError'
+import { ValidationError } from '../errors/errors'
+import * as request from '../request'
+import { requestSettings } from '../request'
+import * as ApiService from './api'
+import { handlers } from './api.unit.handlers'
 
 const mockedFetch = vi.spyOn(request, 'request')
 

@@ -1,10 +1,10 @@
 import type { FullStatusData, LiFiStep, StatusResponse } from '@lifi/types'
-import { ServerError } from '../errors/errors.js'
-import { getStatus } from '../services/api.js'
-import { waitForResult } from '../utils/waitForResult.js'
-import type { StatusManager } from './StatusManager.js'
-import { getSubstatusMessage } from './processMessages.js'
-import type { ProcessType } from './types.js'
+import { ServerError } from '../errors/errors'
+import { getStatus } from '../services/api'
+import { waitForResult } from '../utils/waitForResult'
+import type { StatusManager } from './StatusManager'
+import { getSubstatusMessage } from './processMessages'
+import type { ProcessType } from './types'
 
 const TRANSACTION_HASH_OBSERVERS: Record<string, Promise<StatusResponse>> = {}
 

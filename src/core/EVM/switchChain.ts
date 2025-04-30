@@ -1,10 +1,10 @@
 import type { Client, GetChainIdReturnType } from 'viem'
 import { getChainId } from 'viem/actions'
 import { getAction } from 'viem/utils'
-import { LiFiErrorCode } from '../../errors/constants.js'
-import { ProviderError } from '../../errors/errors.js'
-import type { StatusManager } from '../StatusManager.js'
-import type { LiFiStepExtended, SwitchChainHook } from '../types.js'
+import { LiFiErrorCode } from '../../errors/constants'
+import { ProviderError } from '../../errors/errors'
+import type { StatusManager } from '../StatusManager'
+import type { LiFiStepExtended, SwitchChainHook } from '../types'
 
 /**
  * This method checks whether the wallet client is configured for the correct chain.

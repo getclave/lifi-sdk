@@ -1,4 +1,4 @@
-import { sleep } from './sleep.js'
+import { sleep } from './sleep'
 
 /**
  * Repeatedly calls a given asynchronous function until it resolves with a value

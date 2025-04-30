@@ -23,7 +23,7 @@
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
     // Language and environment
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "bundler",
     "module": "NodeNext",
     "target": "ES2023", // Node v20+
     "lib": [

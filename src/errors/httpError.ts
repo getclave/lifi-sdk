@@ -1,8 +1,8 @@
 import type { UnavailableRoutes } from '@lifi/types'
-import type { ExtendedRequestInit } from '../types/request.js'
-import { BaseError } from './baseError.js'
-import { LiFiErrorCode } from './constants.js'
-import { ErrorMessage, ErrorName } from './constants.js'
+import type { ExtendedRequestInit } from '../types/request'
+import { BaseError } from './baseError'
+import { LiFiErrorCode } from './constants'
+import { ErrorMessage, ErrorName } from './constants'
 
 interface ServerErrorResponseBody {
   code: number

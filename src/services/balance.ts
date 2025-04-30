@@ -1,7 +1,7 @@
 import { ChainType, type Token, type TokenAmount } from '@lifi/types'
-import { config } from '../config.js'
-import { ValidationError } from '../errors/errors.js'
-import { isToken } from '../typeguards.js'
+import { config } from '../config'
+import { ValidationError } from '../errors/errors'
+import { isToken } from '../typeguards'
 
 /**
  * Returns the balances of a specific token a wallet holds across all aggregated chains.

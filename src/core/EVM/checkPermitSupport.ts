@@ -1,12 +1,12 @@
 import type { ExtendedChain } from '@lifi/types'
 import { ChainType } from '@lifi/types'
 import type { Address } from 'viem'
-import { config } from '../../config.js'
-import { getAllowance } from './getAllowance.js'
-import { getNativePermit } from './permits/getNativePermit.js'
-import type { NativePermitData } from './permits/types.js'
-import { getPublicClient } from './publicClient.js'
-import type { EVMProvider } from './types.js'
+import { config } from '../../config'
+import { getAllowance } from './getAllowance'
+import { getNativePermit } from './permits/getNativePermit'
+import type { NativePermitData } from './permits/types'
+import { getPublicClient } from './publicClient'
+import type { EVMProvider } from './types'
 
 export type PermitSupport = {
   /** Whether the token supports EIP-2612 native permits */

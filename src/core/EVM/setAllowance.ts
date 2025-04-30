@@ -2,12 +2,12 @@ import type { Address, Client, Hash, SendTransactionParameters } from 'viem'
 import { encodeFunctionData } from 'viem'
 import { sendTransaction } from 'viem/actions'
 import { getAction } from 'viem/utils'
-import { isNativeTokenAddress } from '../../utils/isZeroAddress.js'
-import type { ExecutionOptions, TransactionParameters } from '../types.js'
-import { approveAbi } from './abi.js'
-import { getAllowance } from './getAllowance.js'
-import type { ApproveTokenRequest, RevokeApprovalRequest } from './types.js'
-import { getMaxPriorityFeePerGas } from './utils.js'
+import { isNativeTokenAddress } from '../../utils/isZeroAddress'
+import type { ExecutionOptions, TransactionParameters } from '../types'
+import { approveAbi } from './abi'
+import { getAllowance } from './getAllowance'
+import type { ApproveTokenRequest, RevokeApprovalRequest } from './types'
+import { getMaxPriorityFeePerGas } from './utils'
 
 export const setAllowance = async (
   client: Client,

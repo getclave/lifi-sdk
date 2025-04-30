@@ -1,8 +1,8 @@
 import type { ChainId, ExtendedChain } from '@lifi/types'
 import type { Address, Chain, Client, Transaction } from 'viem'
 import { getBlock } from 'viem/actions'
-import { config } from '../../config.js'
-import { median } from '../../utils/median.js'
+import { config } from '../../config'
+import { median } from '../../utils/median'
 
 type ChainBlockExplorer = {
   name: string
