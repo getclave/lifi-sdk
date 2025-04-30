@@ -1,2 +1,2 @@
-export const name = '@lifi/sdk'
-export const version = '3.6.11'
+export const name = '@getclave/lifi-sdk'
+export const version = '4.0.0'
