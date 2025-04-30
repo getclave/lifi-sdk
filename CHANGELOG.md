@@ -4,126 +4,109 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [3.6.11](https://github.com/lifinance/sdk/compare/v3.6.10...v3.6.11) (2025-04-29)
 
-
 ### Bug Fixes
 
-* let the wallet estimate the gas in case of failure ([123860e](https://github.com/lifinance/sdk/commit/123860ebc44b5b35a2c8b65b3f4939d758252486))
+- let the wallet estimate the gas in case of failure ([123860e](https://github.com/lifinance/sdk/commit/123860ebc44b5b35a2c8b65b3f4939d758252486))
 
 ### [3.6.10](https://github.com/lifinance/sdk/compare/v3.6.9...v3.6.10) (2025-04-29)
 
-
 ### Bug Fixes
 
-* take old gas estimate if we failed to provide a new one ([#251](https://github.com/lifinance/sdk/issues/251)) ([d4c17c1](https://github.com/lifinance/sdk/commit/d4c17c1d58177494e8d606f07220b6459e0fa930))
+- take old gas estimate if we failed to provide a new one ([#251](https://github.com/lifinance/sdk/issues/251)) ([d4c17c1](https://github.com/lifinance/sdk/commit/d4c17c1d58177494e8d606f07220b6459e0fa930))
 
 ### [3.6.9](https://github.com/lifinance/sdk/compare/v3.6.8...v3.6.9) (2025-04-28)
 
-
 ### Bug Fixes
 
-* **viem:** make EIP-5792 stable ([310a4cc](https://github.com/lifinance/sdk/commit/310a4cc2b613044f68df9d89f478b5fc5644b006))
+- **viem:** make EIP-5792 stable ([310a4cc](https://github.com/lifinance/sdk/commit/310a4cc2b613044f68df9d89f478b5fc5644b006))
 
 ### [3.6.8](https://github.com/lifinance/sdk/compare/v3.6.7...v3.6.8) (2025-04-15)
 
-
 ### Bug Fixes
 
-* add more timestamps for processes ([#248](https://github.com/lifinance/sdk/issues/248)) ([90a7715](https://github.com/lifinance/sdk/commit/90a77159e55556c08b7cb9ba3c04cc0465522383))
-* bump EIP-5792 specs ([#249](https://github.com/lifinance/sdk/issues/249)) ([3742296](https://github.com/lifinance/sdk/commit/3742296f35d72996dc497a4f51d3242fe77cdc60))
+- add more timestamps for processes ([#248](https://github.com/lifinance/sdk/issues/248)) ([90a7715](https://github.com/lifinance/sdk/commit/90a77159e55556c08b7cb9ba3c04cc0465522383))
+- bump EIP-5792 specs ([#249](https://github.com/lifinance/sdk/issues/249)) ([3742296](https://github.com/lifinance/sdk/commit/3742296f35d72996dc497a4f51d3242fe77cdc60))
 
 ### [3.6.7](https://github.com/lifinance/sdk/compare/v3.6.6...v3.6.7) (2025-04-07)
 
-
 ### Bug Fixes
 
-* improve error handling for transaction rejection in Safe ([#246](https://github.com/lifinance/sdk/issues/246)) ([e22f7ab](https://github.com/lifinance/sdk/commit/e22f7ab5e7015bc881504f7c1388ce20290e440d))
-* sync to latest EIP-5792 spec ([#247](https://github.com/lifinance/sdk/issues/247)) ([fa5578f](https://github.com/lifinance/sdk/commit/fa5578f66e9256b831cacd75393fb20e8d875191))
+- improve error handling for transaction rejection in Safe ([#246](https://github.com/lifinance/sdk/issues/246)) ([e22f7ab](https://github.com/lifinance/sdk/commit/e22f7ab5e7015bc881504f7c1388ce20290e440d))
+- sync to latest EIP-5792 spec ([#247](https://github.com/lifinance/sdk/issues/247)) ([fa5578f](https://github.com/lifinance/sdk/commit/fa5578f66e9256b831cacd75393fb20e8d875191))
 
 ### [3.6.6](https://github.com/lifinance/sdk/compare/v3.6.5...v3.6.6) (2025-04-04)
 
-
 ### Bug Fixes
 
-* add flag to disable message signing ([#245](https://github.com/lifinance/sdk/issues/245)) ([c379b84](https://github.com/lifinance/sdk/commit/c379b845f9fdab7e7295c779b2425dbe67f5708a))
+- add flag to disable message signing ([#245](https://github.com/lifinance/sdk/issues/245)) ([c379b84](https://github.com/lifinance/sdk/commit/c379b845f9fdab7e7295c779b2425dbe67f5708a))
 
 ### [3.6.5](https://github.com/lifinance/sdk/compare/v3.6.4...v3.6.5) (2025-04-01)
 
-
 ### Bug Fixes
 
-* improve replaced transactions handling ([#244](https://github.com/lifinance/sdk/issues/244)) ([d5e7829](https://github.com/lifinance/sdk/commit/d5e78299f7041370bd0f27d74ac8304c93ec75e7))
+- improve replaced transactions handling ([#244](https://github.com/lifinance/sdk/issues/244)) ([d5e7829](https://github.com/lifinance/sdk/commit/d5e78299f7041370bd0f27d74ac8304c93ec75e7))
 
 ### [3.6.4](https://github.com/lifinance/sdk/compare/v3.6.3...v3.6.4) (2025-04-01)
 
-
 ### Bug Fixes
 
-* update sendCalls to support EIP-5792 with backward compatibility ([#243](https://github.com/lifinance/sdk/issues/243)) ([95f6575](https://github.com/lifinance/sdk/commit/95f6575c13036d8c4187c3fabd5a195689670be3))
+- update sendCalls to support EIP-5792 with backward compatibility ([#243](https://github.com/lifinance/sdk/issues/243)) ([95f6575](https://github.com/lifinance/sdk/commit/95f6575c13036d8c4187c3fabd5a195689670be3))
 
 ### [3.6.3](https://github.com/lifinance/sdk/compare/v3.6.2...v3.6.3) (2025-04-01)
 
-
 ### Bug Fixes
 
-* allow order permit type ([6c6efd4](https://github.com/lifinance/sdk/commit/6c6efd4412357cc6e21f87c18385e4398152c13a))
-* make permit message serializable ([23ed44d](https://github.com/lifinance/sdk/commit/23ed44d110e33e0578c7a6873b6fe6e595e24052))
+- allow order permit type ([6c6efd4](https://github.com/lifinance/sdk/commit/6c6efd4412357cc6e21f87c18385e4398152c13a))
+- make permit message serializable ([23ed44d](https://github.com/lifinance/sdk/commit/23ed44d110e33e0578c7a6873b6fe6e595e24052))
 
 ### [3.6.2](https://github.com/lifinance/sdk/compare/v3.6.1...v3.6.2) (2025-03-13)
 
-
 ### Bug Fixes
 
-* update permit handling with standardized EIP-712 typed data ([#238](https://github.com/lifinance/sdk/issues/238)) ([57bbd8e](https://github.com/lifinance/sdk/commit/57bbd8e9bcdbd620ae509867beac9f2dff764a2e))
+- update permit handling with standardized EIP-712 typed data ([#238](https://github.com/lifinance/sdk/issues/238)) ([57bbd8e](https://github.com/lifinance/sdk/commit/57bbd8e9bcdbd620ae509867beac9f2dff764a2e))
 
 ### [3.6.1](https://github.com/lifinance/sdk/compare/v3.6.0...v3.6.1) (2025-03-11)
 
-
 ### Bug Fixes
 
-* **execution:** add started and done timestamps ([#237](https://github.com/lifinance/sdk/issues/237)) ([4b28dc7](https://github.com/lifinance/sdk/commit/4b28dc7fb939cc12b5c9f67a5e6e63c15ade9429))
+- **execution:** add started and done timestamps ([#237](https://github.com/lifinance/sdk/issues/237)) ([4b28dc7](https://github.com/lifinance/sdk/commit/4b28dc7fb939cc12b5c9f67a5e6e63c15ade9429))
 
 ## [3.6.0](https://github.com/lifinance/sdk/compare/v3.5.4...v3.6.0) (2025-03-10)
 
-
 ### Features
 
-* add Permit (ERC-2612), Permit2 and Wallet Call API (EIP-5792) support ([#224](https://github.com/lifinance/sdk/issues/224)) ([3278265](https://github.com/lifinance/sdk/commit/32782656dbc92bb0891e96fad3e426ed2294cac9))
-
+- add Permit (ERC-2612), Permit2 and Wallet Call API (EIP-5792) support ([#224](https://github.com/lifinance/sdk/issues/224)) ([3278265](https://github.com/lifinance/sdk/commit/32782656dbc92bb0891e96fad3e426ed2294cac9))
 
 ### Bug Fixes
 
-* improve bitcoin public client handling ([#235](https://github.com/lifinance/sdk/issues/235)) ([06a2d80](https://github.com/lifinance/sdk/commit/06a2d804cce77de171bd4da08dda793516e4ef51))
-* **status-manager:** set startedAt for started processes ([#236](https://github.com/lifinance/sdk/issues/236)) ([edac285](https://github.com/lifinance/sdk/commit/edac285a22692092fc35c3778cc2243e19fbf186))
+- improve bitcoin public client handling ([#235](https://github.com/lifinance/sdk/issues/235)) ([06a2d80](https://github.com/lifinance/sdk/commit/06a2d804cce77de171bd4da08dda793516e4ef51))
+- **status-manager:** set startedAt for started processes ([#236](https://github.com/lifinance/sdk/issues/236)) ([edac285](https://github.com/lifinance/sdk/commit/edac285a22692092fc35c3778cc2243e19fbf186))
 
 ### [3.5.4](https://github.com/lifinance/sdk/compare/v3.5.3...v3.5.4) (2025-02-16)
 
 ### [3.5.3](https://github.com/lifinance/sdk/compare/v3.5.2...v3.5.3) (2025-02-04)
 
-
 ### Bug Fixes
 
-* fixed evm address compare check ([#234](https://github.com/lifinance/sdk/issues/234)) ([6cccf2d](https://github.com/lifinance/sdk/commit/6cccf2d3b60c66e426f0469336a6c461a3c5e69e))
+- fixed evm address compare check ([#234](https://github.com/lifinance/sdk/issues/234)) ([6cccf2d](https://github.com/lifinance/sdk/commit/6cccf2d3b60c66e426f0469336a6c461a3c5e69e))
 
 ### [3.5.2](https://github.com/lifinance/sdk/compare/v3.5.1...v3.5.2) (2025-01-14)
 
-
 ### Bug Fixes
 
-* preserve transaction hash when creating new process ([#232](https://github.com/lifinance/sdk/issues/232)) ([7e8c829](https://github.com/lifinance/sdk/commit/7e8c829af53ba9e9333333df54b3a67e44702c4c))
+- preserve transaction hash when creating new process ([#232](https://github.com/lifinance/sdk/issues/232)) ([7e8c829](https://github.com/lifinance/sdk/commit/7e8c829af53ba9e9333333df54b3a67e44702c4c))
 
 ### [3.5.1](https://github.com/lifinance/sdk/compare/v3.5.0...v3.5.1) (2025-01-09)
 
-
 ### Bug Fixes
 
-* add bugs field to published package.json ([67c6685](https://github.com/lifinance/sdk/commit/67c668576ceb0999d73c63be9a8bc753b7ebcc46))
+- add bugs field to published package.json ([67c6685](https://github.com/lifinance/sdk/commit/67c668576ceb0999d73c63be9a8bc753b7ebcc46))
 
 ## [3.5.0](https://github.com/lifinance/sdk/compare/v3.4.4...v3.5.0) (2025-01-02)
 
-
 ### Features
 
-* improve transaction execution for smart account clients ([#222](https://github.com/lifinance/sdk/issues/222)) ([2580dbe](https://github.com/lifinance/sdk/commit/2580dbe6ce6e8a9634c22c84dd75de27b4a23f2f))
+- improve transaction execution for smart account clients ([#222](https://github.com/lifinance/sdk/issues/222)) ([2580dbe](https://github.com/lifinance/sdk/commit/2580dbe6ce6e8a9634c22c84dd75de27b4a23f2f))
 
 ### [3.4.4](https://github.com/lifinance/sdk/compare/v3.4.3...v3.4.4) (2024-12-20)
 
@@ -133,61 +116,53 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [3.4.1](https://github.com/lifinance/sdk/compare/v3.4.0...v3.4.1) (2024-10-31)
 
-
 ### Bug Fixes
 
-* export more provider types ([24a0e80](https://github.com/lifinance/sdk/commit/24a0e8008fc05a74b6ad613e01d919e7cd768494))
+- export more provider types ([24a0e80](https://github.com/lifinance/sdk/commit/24a0e8008fc05a74b6ad613e01d919e7cd768494))
 
 ## [3.4.0](https://github.com/lifinance/sdk/compare/v3.3.1...v3.4.0) (2024-10-28)
 
-
 ### Features
 
-* add support for multiple Solana RPCs ([#220](https://github.com/lifinance/sdk/issues/220)) ([08b7faa](https://github.com/lifinance/sdk/commit/08b7faa5733b818cdfdc5693580f6018300e5c22))
+- add support for multiple Solana RPCs ([#220](https://github.com/lifinance/sdk/issues/220)) ([08b7faa](https://github.com/lifinance/sdk/commit/08b7faa5733b818cdfdc5693580f6018300e5c22))
 
 ### [3.3.1](https://github.com/lifinance/sdk/compare/v3.3.0...v3.3.1) (2024-10-23)
 
-
 ### Bug Fixes
 
-* remove console.log ([99a0c1c](https://github.com/lifinance/sdk/commit/99a0c1c566bbb2ac9f750b4700882b9fec3ce448))
+- remove console.log ([99a0c1c](https://github.com/lifinance/sdk/commit/99a0c1c566bbb2ac9f750b4700882b9fec3ce448))
 
 ## [3.3.0](https://github.com/lifinance/sdk/compare/v3.2.3...v3.3.0) (2024-10-18)
 
-
 ### Features
 
-* add Bitcoin/UTXO support ([#218](https://github.com/lifinance/sdk/issues/218)) ([379c342](https://github.com/lifinance/sdk/commit/379c342eb4e5a2f65ae02fa2a2037e31a92a1e6e))
+- add Bitcoin/UTXO support ([#218](https://github.com/lifinance/sdk/issues/218)) ([379c342](https://github.com/lifinance/sdk/commit/379c342eb4e5a2f65ae02fa2a2037e31a92a1e6e))
 
 ### [3.2.3](https://github.com/lifinance/sdk/compare/v3.2.2...v3.2.3) (2024-09-17)
 
-
 ### Bug Fixes
 
-* add process chain id ([#217](https://github.com/lifinance/sdk/issues/217)) ([16c95dc](https://github.com/lifinance/sdk/commit/16c95dcb9323d5eeae707090412200f5eb9b80e5))
+- add process chain id ([#217](https://github.com/lifinance/sdk/issues/217)) ([16c95dc](https://github.com/lifinance/sdk/commit/16c95dcb9323d5eeae707090412200f5eb9b80e5))
 
 ### [3.2.2](https://github.com/lifinance/sdk/compare/v3.2.1...v3.2.2) (2024-09-16)
 
-
 ### Bug Fixes
 
-* getContractCallsQuote validation ([#216](https://github.com/lifinance/sdk/issues/216)) ([7cf5027](https://github.com/lifinance/sdk/commit/7cf5027dc4b2f107278009e08181fa3fef6bc1d2))
+- getContractCallsQuote validation ([#216](https://github.com/lifinance/sdk/issues/216)) ([7cf5027](https://github.com/lifinance/sdk/commit/7cf5027dc4b2f107278009e08181fa3fef6bc1d2))
 
 ### [3.2.1](https://github.com/lifinance/sdk/compare/v3.2.0...v3.2.1) (2024-09-12)
 
 ## [3.2.0](https://github.com/lifinance/sdk/compare/v3.1.5...v3.2.0) (2024-09-10)
 
-
 ### Features
 
-* replace wallet and public clients with base client ([#215](https://github.com/lifinance/sdk/issues/215)) ([76122c6](https://github.com/lifinance/sdk/commit/76122c6993130a8d2273ff37bda3ee2344fd965a))
+- replace wallet and public clients with base client ([#215](https://github.com/lifinance/sdk/issues/215)) ([76122c6](https://github.com/lifinance/sdk/commit/76122c6993130a8d2273ff37bda3ee2344fd965a))
 
 ### [3.1.5](https://github.com/lifinance/sdk/compare/v3.1.3...v3.1.5) (2024-08-09)
 
-
 ### Bug Fixes
 
-* add process chain id ([#217](https://github.com/lifinance/sdk/issues/217)) ([16c95dc](https://github.com/lifinance/sdk/commit/16c95dcb9323d5eeae707090412200f5eb9b80e5))
+- add process chain id ([#217](https://github.com/lifinance/sdk/issues/217)) ([16c95dc](https://github.com/lifinance/sdk/commit/16c95dcb9323d5eeae707090412200f5eb9b80e5))
 
 ### [3.2.2](https://github.com/lifinance/sdk/compare/v3.2.1...v3.2.2) (2024-09-16)
 

@@ -1,6 +1,6 @@
 import { http, HttpResponse } from 'msw'
-import { buildStepObject } from '../../tests/fixtures'
 import { config } from '../config'
+import { buildStepObject } from '../tests/fixtures'
 import {
   mockChainsResponse,
   mockStatus,

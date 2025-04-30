@@ -1,6 +1,6 @@
 {
   "name": "@getclave/lifi-sdk",
-  "version": "3.6.11",
+  "version": "3.6.18",
   "description": "LI.FI Any-to-Any Cross-Chain-Swap SDK",
   "keywords": [
     "bridge",
@@ -32,25 +32,12 @@
   },
   "license": "Apache-2.0",
   "author": "LI.FI <github@li.finance>",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./src/_types/index.d.ts",
-      "import": "./src/_esm/index.js",
-      "default": "./src/_cjs/index.js"
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "./src/_cjs/index.js",
-  "module": "./src/_esm/index.js",
-  "types": "./src/_types/index.d.ts",
-  "typings": "./src/_types/index.d.ts",
-  "sideEffects": false,
-  "directories": {
-    "test": "tests"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "src",
+    "dist",
+    "!dist/tests",
     "!src/**/*.test.ts",
     "!src/**/*.mock.ts",
     "!src/**/*.spec.ts",
@@ -58,11 +45,8 @@
     "!src/**/*.tsbuildinfo"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:cjs && pnpm build:esm && pnpm build:types",
-    "build:cjs": "tsc --project ./tsconfig.build.json --module commonjs --outDir ./src/_cjs --removeComments --verbatimModuleSyntax false && printf '{\"type\":\"commonjs\"}' > ./src/_cjs/package.json",
-    "build:esm": "tsc --project ./tsconfig.build.json --module es2015 --outDir ./src/_esm && printf '{\"type\": \"module\",\"sideEffects\":false}' > ./src/_esm/package.json",
-    "build:types": "tsc --project ./tsconfig.build.json --module esnext --declarationDir ./src/_types --emitDeclarationOnly --declaration --declarationMap",
-    "clean": "rm -rf dist src/_esm src/_cjs src/_types",
+    "build": "pnpm clean && tsc",
+    "clean": "rm -rf dist",
     "coverage": "vitest run --coverage",
     "postinstall": "husky",
     "prepack": "pinst --disable",
@@ -94,9 +78,6 @@
     "@bigmi/core": "^0.1.1",
     "@lifi/types": "^17.13.0",
     "@noble/curves": "^1.9.0",
-    "bech32": "^2.0.0",
-    "bitcoinjs-lib": "^7.0.0-rc.0",
-    "bs58": "^6.0.0",
     "viem": "^2.28.1"
   },
   "devDependencies": {

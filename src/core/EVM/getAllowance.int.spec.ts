@@ -1,9 +1,9 @@
 import { ChainId, CoinKey } from '@lifi/types'
 import type { Address } from 'viem'
 import { beforeAll, describe, expect, it } from 'vitest'
-import { setupTestEnvironment } from '../../../tests/setup'
-import { findDefaultToken } from '../../../tests/tokens'
 import { getTokens } from '../../services/api'
+import { setupTestEnvironment } from '../../tests/setup'
+import { findDefaultToken } from '../../tests/tokens'
 import {
   getAllowance,
   getAllowanceMulticall,

@@ -11,8 +11,8 @@ import {
   it,
   vi,
 } from 'vitest'
-import { buildRouteObject, buildStepObject } from '../../tests/fixtures'
 import { requestSettings } from '../request'
+import { buildRouteObject, buildStepObject } from '../tests/fixtures'
 import { executeRoute } from './execution'
 import { lifiHandlers } from './execution.unit.handlers'
 

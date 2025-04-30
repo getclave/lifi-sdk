@@ -10,13 +10,13 @@ import {
   it,
   vi,
 } from 'vitest'
-import { setupTestEnvironment } from '../tests/setup'
 import { config } from './config'
 import { SDKError } from './errors/SDKError'
 import { ValidationError } from './errors/errors'
 import type { HTTPError } from './errors/httpError'
 import { request } from './request'
 import { handlers } from './services/api.unit.handlers'
+import { setupTestEnvironment } from './tests/setup'
 import type { SDKBaseConfig } from './types/internal'
 import type { ExtendedRequestInit } from './types/request'
 import { version } from './version'

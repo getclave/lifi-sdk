@@ -55,9 +55,6 @@ export type {
   TransactionRequestUpdateHook,
   UpdateRouteHook,
 } from './core/types'
-export { UTXO } from './core/UTXO/UTXO'
-export { isUTXO } from './core/UTXO/types'
-export type { UTXOProvider, UTXOProviderOptions } from './core/UTXO/types'
 export { createConfig } from './createConfig'
 export { checkPackageUpdates } from './utils/checkPackageUpdates'
 export { convertQuoteToRoute } from './utils/convertQuoteToRoute'

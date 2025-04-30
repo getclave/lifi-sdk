@@ -21,13 +21,13 @@ import {
   it,
   vi,
 } from 'vitest'
-import { setupTestEnvironment } from '../../tests/setup'
-import { findDefaultToken } from '../../tests/tokens'
 import { config } from '../config'
 import { SDKError } from '../errors/SDKError'
 import { ValidationError } from '../errors/errors'
 import * as request from '../request'
 import { requestSettings } from '../request'
+import { setupTestEnvironment } from '../tests/setup'
+import { findDefaultToken } from '../tests/tokens'
 import * as ApiService from './api'
 import { handlers } from './api.unit.handlers'
 

@@ -1,7 +1,7 @@
 import type { Token } from '@lifi/types'
 import { ChainId, CoinKey } from '@lifi/types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { findDefaultToken } from '../../tests/tokens'
+import { findDefaultToken } from '../tests/tokens'
 import * as balance from './balance'
 
 const mockedGetTokenBalance = vi.spyOn(balance, 'getTokenBalance')

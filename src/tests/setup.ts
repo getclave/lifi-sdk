@@ -1,5 +1,5 @@
-import { createConfig } from '../src/createConfig'
-import { EVM } from '../src/index'
+import { EVM } from '../core/EVM/EVM'
+import { createConfig } from '../createConfig'
 
 export const setupTestEnvironment = () => {
   createConfig({

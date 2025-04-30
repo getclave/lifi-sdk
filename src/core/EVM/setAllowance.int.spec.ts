@@ -4,7 +4,7 @@ import { mnemonicToAccount } from 'viem/accounts'
 import { waitForTransactionReceipt } from 'viem/actions'
 import { polygon } from 'viem/chains'
 import { beforeAll, describe, expect, it } from 'vitest'
-import { setupTestEnvironment } from '../../../tests/setup'
+import { setupTestEnvironment } from '../../tests/setup'
 import { revokeTokenApproval, setTokenAllowance } from './setAllowance'
 import { retryCount, retryDelay } from './utils'
 
