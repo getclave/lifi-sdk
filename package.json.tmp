@@ -70,6 +70,7 @@
     "package": "npm run build && npm pack",
     "pre-commit": "lint-staged",
     "pre-push": "pnpm check:types && pnpm check:circular-deps && pnpm test:unit",
+    "prepublishOnly": "pnpm node scripts/prepublishOnly.js",
     "release": "standard-version -a",
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
     "release:beta": "standard-version -a --prerelease beta --skip.changelog",
