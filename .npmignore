@@ -1,0 +1,14 @@
+.github
+.vscode
+examples
+scripts
+tsconfig.json
+tsconfig.base.json
+vitest.config.ts
+biome.json
+.prettierrc
+.npmrc
+.gitattributes
+.gitignore
+commitlintrc.json
+
