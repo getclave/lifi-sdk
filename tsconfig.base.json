@@ -24,7 +24,7 @@
     "verbatimModuleSyntax": true,
     // Language and environment
     "moduleResolution": "bundler",
-    "module": "NodeNext",
+    "module": "ESNext",
     "target": "ES2023", // Node v20+
     "lib": [
       "ES2024",
