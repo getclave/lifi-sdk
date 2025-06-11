@@ -92,7 +92,7 @@
   },
   "dependencies": {
     "@lifi/types": "^17.13.0",
-    "viem": "2.23.15"
+    "viem": "^2.28.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
