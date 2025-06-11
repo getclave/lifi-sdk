@@ -2,7 +2,99 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [4.0.5](https://github.com/getclave/lifi-sdk/compare/v4.0.4...v4.0.5) (2025-05-05)
+### Bug Fixes
+
+* increase timeout for batch transactions ([#266](https://github.com/lifinance/sdk/issues/266)) ([5fa974d](https://github.com/lifinance/sdk/commit/5fa974d64a7118550ff3ff1d41d9a2e8990a3691))
+
+### [3.7.8](https://github.com/lifinance/sdk/compare/v3.7.7...v3.7.8) (2025-06-06)
+
+
+### Bug Fixes
+
+* increase timeout ([ae19b37](https://github.com/lifinance/sdk/commit/ae19b37123b6c51eadd8dac16bd60f512f6c8405))
+
+### [3.7.7](https://github.com/lifinance/sdk/compare/v3.7.6...v3.7.7) (2025-05-30)
+
+### [3.7.6](https://github.com/lifinance/sdk/compare/v3.7.5...v3.7.6) (2025-05-30)
+
+
+### Bug Fixes
+
+* add support for token 2022 programs ([#264](https://github.com/lifinance/sdk/issues/264)) ([584439f](https://github.com/lifinance/sdk/commit/584439fe6c924e11148ce32dbf0de42a86cdfa33))
+
+### [3.7.5](https://github.com/lifinance/sdk/compare/v3.7.4...v3.7.5) (2025-05-29)
+
+
+### Bug Fixes
+
+* error handling should include nested error causes ([e54fc73](https://github.com/lifinance/sdk/commit/e54fc73b08f54e43e9162a83fddca265a801aadb))
+
+### [3.7.4](https://github.com/lifinance/sdk/compare/v3.7.3...v3.7.4) (2025-05-29)
+
+
+### Bug Fixes
+
+* error class names can't be minified correctly ([65662d3](https://github.com/lifinance/sdk/commit/65662d3de0e0cb319631a9eae9615f18f0495ddd))
+
+### [3.7.3](https://github.com/lifinance/sdk/compare/v3.7.2...v3.7.3) (2025-05-28)
+
+
+### Bug Fixes
+
+* add public client fallback for wallet client failures on EVM RPC calls ([#261](https://github.com/lifinance/sdk/issues/261)) ([df917b2](https://github.com/lifinance/sdk/commit/df917b2b4b0e307a27ae74ebc7c921104fbb13e1))
+* improve 7702 upgrade rejection error handling ([#263](https://github.com/lifinance/sdk/issues/263)) ([3adf253](https://github.com/lifinance/sdk/commit/3adf2530bd93c4ff648efb6de7a3d71e1e20820c))
+
+### [3.7.2](https://github.com/lifinance/sdk/compare/v3.7.1...v3.7.2) (2025-05-21)
+
+
+### Bug Fixes
+
+* ensure safe access to error cause when handling wallet upgrade rejections ([#260](https://github.com/lifinance/sdk/issues/260)) ([426bd15](https://github.com/lifinance/sdk/commit/426bd1589676b3d388813171932e8de368d4668c))
+
+### [3.7.1](https://github.com/lifinance/sdk/compare/v3.7.0...v3.7.1) (2025-05-20)
+
+
+### Bug Fixes
+
+* handle wallet 7702 upgrade rejections more gracefully ([#259](https://github.com/lifinance/sdk/issues/259)) ([f1df53a](https://github.com/lifinance/sdk/commit/f1df53a8e42ec581a416b3d111214702817dc200))
+
+## [3.7.0](https://github.com/lifinance/sdk/compare/v3.6.16...v3.7.0) (2025-05-15)
+
+
+### Features
+
+* add Sui support ([#257](https://github.com/lifinance/sdk/issues/257)) ([882a0a5](https://github.com/lifinance/sdk/commit/882a0a5b89cc6755b874ee7620cb5bf91ecdcea7))
+* remove Bigmi viem dependencies ([#252](https://github.com/lifinance/sdk/issues/252)) ([998d595](https://github.com/lifinance/sdk/commit/998d59571cc350d9bf58ef1ea9b939f4854df3ac))
+
+### [3.6.16](https://github.com/lifinance/sdk/compare/v3.6.15...v3.6.16) (2025-05-14)
+
+
+### Bug Fixes
+
+* refine allowance checks for direct transfers ([dbcd640](https://github.com/lifinance/sdk/commit/dbcd640bb5b195c7b582c1b6921378cb470f2918))
+
+### [3.6.15](https://github.com/lifinance/sdk/compare/v3.6.14...v3.6.15) (2025-05-14)
+
+
+### Bug Fixes
+
+* skip allowance check for direct transfers ([#258](https://github.com/lifinance/sdk/issues/258)) ([2ecf469](https://github.com/lifinance/sdk/commit/2ecf469dad360a66cc962c9948821bd1da13c687))
+
+### [3.6.14](https://github.com/lifinance/sdk/compare/v3.6.13...v3.6.14) (2025-05-12)
+
+
+### Bug Fixes
+
+* add timeout for getCapabilities call ([#256](https://github.com/lifinance/sdk/issues/256)) ([ee07c25](https://github.com/lifinance/sdk/commit/ee07c254a2bf9e640d66f07990d876450707b306))
+
+### [3.6.13](https://github.com/lifinance/sdk/compare/v3.6.12...v3.6.13) (2025-05-06)
+
+
+### Bug Fixes
+
+* add new error codes ([#250](https://github.com/lifinance/sdk/issues/250)) ([907bba7](https://github.com/lifinance/sdk/commit/907bba76f45e410c44de2d76ac6f92c5cef00de5))
+
+### [3.6.12](https://github.com/lifinance/sdk/compare/v3.6.11...v3.6.12) (2025-05-05)
 
 ### [4.0.4](https://github.com/getclave/lifi-sdk/compare/v4.0.3...v4.0.4) (2025-05-05)
 

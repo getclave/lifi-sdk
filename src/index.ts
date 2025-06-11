@@ -15,10 +15,7 @@ export { isEVM } from './core/EVM/types'
 export { isBatchingSupported } from './core/EVM/isBatchingSupported'
 export { isExtendedChain, convertExtendedChain } from './core/EVM/utils'
 export { isRelayerStep, isGaslessStep } from './core/EVM/typeguards'
-export type {
-  EVMProvider,
-  EVMProviderOptions,
-} from './core/EVM/types'
+export type { EVMProvider, EVMProviderOptions } from './core/EVM/types'
 export { StatusManager } from './core/StatusManager'
 export {
   executeRoute,
@@ -79,14 +76,14 @@ export {
   getTokenBalances,
   getTokenBalancesByChain,
 } from './services/balance'
-export { getNameServiceAddress } from './services/getNameServiceAddress'
-export type { RPCUrls, SDKBaseConfig, SDKConfig } from './types/internal'
-export { BaseError } from './errors/baseError'
 export {
   ErrorMessage,
   ErrorName,
   LiFiErrorCode,
 } from './errors/constants'
+export { getNameServiceAddress } from './services/getNameServiceAddress'
+export type { RPCUrls, SDKBaseConfig, SDKConfig } from './types/internal'
+export { BaseError } from './errors/baseError'
 export type { ErrorCode } from './errors/constants'
 export {
   BalanceError,

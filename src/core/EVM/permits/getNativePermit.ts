@@ -10,6 +10,7 @@ import type { Address, Client, Hex } from 'viem'
 import type { TypedDataDomain } from 'viem'
 import { multicall, readContract } from 'viem/actions'
 import { eip2612Abi, eip2612Types } from '../abi'
+import { getActionWithFallback } from '../getActionWithFallback'
 import { getMulticallAddress } from '../utils'
 import type { NativePermitData } from './types'
 
@@ -34,6 +35,13 @@ const EIP712_DOMAIN_TYPEHASH =
  */
 const EIP712_DOMAIN_TYPEHASH_WITH_SALT =
   '0x36c25de3e541d5d970f66e4210d728721220fff5c077cc6cd008b3a0c62adab7' as Hex
+
+export type GetNativePermitParams = {
+  chainId: number
+  tokenAddress: Address
+  spenderAddress: Address
+  amount: bigint
+}
 
 function makeDomainSeparator({
   name,
@@ -144,10 +152,7 @@ function validateDomainSeparator({
  */
 export const getNativePermit = async (
   client: Client,
-  chainId: number,
-  tokenAddress: Address,
-  spenderAddress: Address,
-  amount: bigint
+  { chainId, tokenAddress, spenderAddress, amount }: GetNativePermitParams
 ): Promise<NativePermitData | undefined> => {
   try {
     const multicallAddress = await getMulticallAddress(chainId)
@@ -177,54 +182,61 @@ export const getNativePermit = async (
     ] as const
 
     if (multicallAddress) {
-      const [nameResult, domainSeparatorResult, noncesResult, versionResult] =
-        await multicall(client, {
-          contracts: contractCalls,
-          multicallAddress,
+      try {
+        const [nameResult, domainSeparatorResult, noncesResult, versionResult] =
+          await getActionWithFallback(client, multicall, 'multicall', {
+            contracts: contractCalls,
+            multicallAddress,
+          })
+
+        if (
+          nameResult.status !== 'success' ||
+          domainSeparatorResult.status !== 'success' ||
+          noncesResult.status !== 'success' ||
+          !nameResult.result ||
+          !domainSeparatorResult.result ||
+          noncesResult.result === undefined
+        ) {
+          // Fall back to individual calls if multicall fails
+          throw new Error('Multicall failed')
+        }
+
+        const { isValid, domain } = validateDomainSeparator({
+          name: nameResult.result,
+          version: versionResult.result ?? '1',
+          chainId,
+          verifyingContract: tokenAddress,
+          domainSeparator: domainSeparatorResult.result,
         })
 
-      if (
-        nameResult.status !== 'success' ||
-        domainSeparatorResult.status !== 'success' ||
-        noncesResult.status !== 'success' ||
-        !nameResult.result ||
-        !domainSeparatorResult.result ||
-        noncesResult.result === undefined
-      ) {
-        return undefined
-      }
+        if (!isValid) {
+          return undefined
+        }
 
-      const { isValid, domain } = validateDomainSeparator({
-        name: nameResult.result,
-        version: versionResult.result ?? '1',
-        chainId,
-        verifyingContract: tokenAddress,
-        domainSeparator: domainSeparatorResult.result,
-      })
+        const message = {
+          owner: client.account!.address,
+          spender: spenderAddress,
+          value: amount.toString(),
+          nonce: noncesResult.result.toString(),
+          deadline: BigInt(Math.floor(Date.now() / 1000) + 30 * 60).toString(), // 30 minutes
+        }
 
-      if (!isValid) {
-        return undefined
-      }
-
-      const message = {
-        owner: client.account!.address,
-        spender: spenderAddress,
-        value: amount.toString(),
-        nonce: noncesResult.result.toString(),
-        deadline: BigInt(Math.floor(Date.now() / 1000) + 30 * 60).toString(), // 30 minutes
-      }
-
-      return {
-        primaryType: 'Permit',
-        domain,
-        types: eip2612Types,
-        message,
+        return {
+          primaryType: 'Permit',
+          domain,
+          types: eip2612Types,
+          message,
+        }
+      } catch {
+        // Fall through to individual calls
       }
     }
 
     const [nameResult, domainSeparatorResult, noncesResult, versionResult] =
       (await Promise.allSettled(
-        contractCalls.map((call) => readContract(client, call))
+        contractCalls.map((call) =>
+          getActionWithFallback(client, readContract, 'readContract', call)
+        )
       )) as [
         PromiseSettledResult<string>,
         PromiseSettledResult<Hex>,

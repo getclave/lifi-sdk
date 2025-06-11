@@ -1,10 +1,10 @@
+import { findDefaultToken } from '@lifi/data-types'
 import type { StaticToken, Token } from '@lifi/types'
 import { ChainId, CoinKey } from '@lifi/types'
 import type { Address } from 'viem'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { getTokens } from '../../services/api'
 import { setupTestEnvironment } from '../../tests/setup'
-import { findDefaultToken } from '../../tests/tokens'
 import { getEVMBalance } from './getEVMBalance'
 
 const defaultWalletAddress = '0x552008c0f6870c2f77e5cC1d2eb9bdff03e30Ea0'
@@ -63,7 +63,7 @@ describe('getBalances integration tests', () => {
     async () => {
       const walletAddress = defaultWalletAddress
       const tokens = [
-        findDefaultToken(CoinKey.MATIC, ChainId.POL),
+        findDefaultToken(CoinKey.POL, ChainId.POL),
         findDefaultToken(CoinKey.DAI, ChainId.POL),
       ]
 
@@ -76,7 +76,7 @@ describe('getBalances integration tests', () => {
     { retry: retryTimes, timeout },
     async () => {
       const walletAddress = defaultWalletAddress
-      const invalidToken = findDefaultToken(CoinKey.MATIC, ChainId.POL)
+      const invalidToken = findDefaultToken(CoinKey.POL, ChainId.POL)
       invalidToken.address = '0x2170ed0880ac9a755fd29b2688956bd959f933f8'
       const tokens = [findDefaultToken(CoinKey.USDC, ChainId.POL), invalidToken]
 

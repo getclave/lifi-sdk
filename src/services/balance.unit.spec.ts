@@ -1,7 +1,7 @@
+import { findDefaultToken } from '@lifi/data-types'
 import type { Token } from '@lifi/types'
 import { ChainId, CoinKey } from '@lifi/types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { findDefaultToken } from '../tests/tokens'
 import * as balance from './balance'
 
 const mockedGetTokenBalance = vi.spyOn(balance, 'getTokenBalance')
@@ -18,7 +18,7 @@ describe('Balance service tests', () => {
   const SOME_TOKEN = {
     ...findDefaultToken(CoinKey.USDC, ChainId.DAI),
     priceUSD: '',
-  }
+  } as Token
   const SOME_WALLET_ADDRESS = 'some wallet address'
 
   describe('getTokenBalance', () => {

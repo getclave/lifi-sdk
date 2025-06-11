@@ -35,8 +35,12 @@ import type {
 } from '../types'
 import { waitForDestinationChainTransaction } from '../waitForDestinationChainTransaction'
 import { checkAllowance } from './checkAllowance'
+import { getActionWithFallback } from './getActionWithFallback'
 import { isBatchingSupported } from './isBatchingSupported'
-import { parseEVMErrors } from './parseEVMErrors'
+import {
+  isAtomicReadyWalletRejectedUpgradeError,
+  parseEVMErrors,
+} from './parseEVMErrors'
 import { encodeNativePermitData } from './permits/encodeNativePermitData'
 import { encodePermit2Data } from './permits/encodePermit2Data'
 import { signPermit2Message } from './permits/signPermit2Message'
@@ -194,7 +198,11 @@ export class EVMStepExecutor extends BaseStepExecutor {
     )
   }
 
-  executeStep = async (step: LiFiStepExtended): Promise<LiFiStepExtended> => {
+  executeStep = async (
+    step: LiFiStepExtended,
+    // Explicitly set to true if the wallet rejected the upgrade to 7702 account, based on the EIP-5792 capabilities
+    atomicityNotReady = false
+  ): Promise<LiFiStepExtended> => {
     step.execution = this.statusManager.initExecutionObject(step)
 
     // Find if it's bridging and the step is waiting for a transaction on the destination chain
@@ -218,10 +226,17 @@ export class EVMStepExecutor extends BaseStepExecutor {
 
     // Check if the wallet supports atomic batch transactions (EIP-5792)
     const calls: Call[] = []
-    const batchingSupported = await isBatchingSupported({
-      client: this.client,
-      chainId: fromChain.id,
-    })
+
+    // Batching via EIP-5792 is disabled in two cases:
+    // 1. When atomicity is not ready or the wallet rejected the upgrade to 7702 account (atomicityNotReady is true)
+    // 2. When the step is using thorswap tool
+    const batchingSupported =
+      atomicityNotReady || step.tool === 'thorswap'
+        ? false
+        : await isBatchingSupported({
+            client: this.client,
+            chainId: fromChain.id,
+          })
 
     const isBridgeExecution = fromChain.id !== toChain.id
     const currentProcessType = isBridgeExecution ? 'CROSS_CHAIN' : 'SWAP'
@@ -248,13 +263,17 @@ export class EVMStepExecutor extends BaseStepExecutor {
       !!fromChain.permit2Proxy &&
       !batchingSupported &&
       !isFromNativeToken &&
-      !disableMessageSigning
+      !disableMessageSigning &&
+      // Approval address is not required for Permit2 per se, but we use it to skip allowance checks for direct transfers
+      !!step.estimate.approvalAddress
 
     const checkForAllowance =
       // No existing swap/bridge transaction is pending
       !existingProcess?.txHash &&
       // Token is not native (address is not zero)
-      !isFromNativeToken
+      !isFromNativeToken &&
+      // Approval address is required for allowance checks, but may be null in special cases (e.g. direct transfers)
+      !!step.estimate.approvalAddress
 
     let signedNativePermitTypedData: SignedTypedData | undefined
     if (checkForAllowance) {
@@ -551,12 +570,17 @@ export class EVMStepExecutor extends BaseStepExecutor {
           transactionRequest.to = fromChain.permit2Proxy
           try {
             // Try to re-estimate the gas due to additional Permit data
-            const estimatedGas = await estimateGas(this.client, {
-              account: this.client.account!,
-              to: transactionRequest.to as Address,
-              data: transactionRequest.data as Hex,
-              value: transactionRequest.value,
-            })
+            const estimatedGas = await getActionWithFallback(
+              this.client,
+              estimateGas,
+              'estimateGas',
+              {
+                account: this.client.account!,
+                to: transactionRequest.to as Address,
+                data: transactionRequest.data as Hex,
+                value: transactionRequest.value,
+              }
+            )
             transactionRequest.gas =
               transactionRequest.gas && transactionRequest.gas > estimatedGas
                 ? transactionRequest.gas
@@ -617,6 +641,11 @@ export class EVMStepExecutor extends BaseStepExecutor {
       // DONE
       return step
     } catch (e: any) {
+      // If the wallet rejected the upgrade to 7702 account, we need to try again with the standard flow
+      if (isAtomicReadyWalletRejectedUpgradeError(e) && !atomicityNotReady) {
+        step.execution = undefined
+        return this.executeStep(step, true)
+      }
       const error = await parseEVMErrors(e, step, process)
       process = this.statusManager.updateProcess(
         step,

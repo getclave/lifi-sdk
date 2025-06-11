@@ -1,4 +1,5 @@
 import type { LiFiStep } from '@lifi/types'
+import { AtomicReadyWalletRejectedUpgradeError } from 'viem'
 import { SDKError } from '../../errors/SDKError'
 import { BaseError } from '../../errors/baseError'
 import { ErrorMessage, LiFiErrorCode } from '../../errors/constants'
@@ -83,4 +84,20 @@ const handleSpecificErrors = async (
   }
 
   return new UnknownError(e.message || ErrorMessage.UnknownError, e)
+}
+
+export const isAtomicReadyWalletRejectedUpgradeError = (e: any) => {
+  if (e.cause?.code === AtomicReadyWalletRejectedUpgradeError.code) {
+    return true
+  }
+
+  const details = e.cause?.details?.toLowerCase()
+  const isTransactionError =
+    e.name === 'TransactionExecutionError' ||
+    e.cause?.name === 'TransactionExecutionError'
+  const hasRejectedUpgrade =
+    details?.includes('rejected') && details?.includes('upgrade')
+  const has7702ErrorCode = details?.includes('7702')
+
+  return isTransactionError && (hasRejectedUpgrade || has7702ErrorCode)
 }
